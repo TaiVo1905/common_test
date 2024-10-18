@@ -1,0 +1,183 @@
+/* Menu */
+/* Tiêu đề MenuPage */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.reset_search{
+    width: 140px;
+    height: 30px;
+    background-color:orangered ;
+    color:white;
+    border-radius: 5px;
+    font-size: 14px;
+    text-align: center;
+    margin-left: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding-top: 7px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+#menu_tbl {
+    margin-top: 150px; /* Khoảng cách với phần header cố định */
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+
+#menu_tbl thead th {
+    position: sticky; /* Giữ cố định khi cuộn */
+    top: 57px; /* Đặt ngay dưới header cố định */
+    background-color: white;
+    padding: 20px;
+    border-bottom: 2px solid rgb(113, 111, 111);
+    color: rgb(125, 123, 123);
+    text-transform: uppercase;
+}
+#menu_tbl tbody td {
+    text-align: center;
+    font-size: 18px;
+}
+/* Thanh điều hướng của menu */
+#menu_list{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#menu_list a.active{
+    color: white;
+    background-color: orangered;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+#menu_list li a{
+    color: rgb(125, 123, 123);
+    text-transform: uppercase;
+    margin: 0 15px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+} 
+/* Bảng menu */
+#menu_tbl{
+    margin-top: 30px; /* Để tránh bảng bị che bởi tiêu đề cố định */
+    width: 100%;
+    border-collapse: collapse;
+    border: none;
+}
+#menu_tbl tr th{
+    padding: 20px;
+    border: none;
+    border-bottom: 2px solid rgb(113, 111, 111);
+    color: rgb(125, 123, 123);
+    text-transform: uppercase;
+    background-color: white;
+    position: sticky; /* Sticky giữ cố định phần tiêu đề của bảng khi cuộn */
+}
+#menu_title {
+    text-align: center;
+    margin: 5px auto; /* Đặt giá trị margin theo trục dọc và ngang */
+    text-transform: uppercase;
+    font-size: 20px;
+    color: rgb(93, 92, 92);
+    width: 100%; /* Đảm bảo chiều rộng phủ toàn bộ */
+    margin-top: 100px ; 
+}
+#menu_item2, #menu_item4, #menu_item6, #menu_item8, #menu_item10{
+    background-color: rgb(237, 236, 236);
+}
+#menu_tbl tr td{
+    text-align: center;
+    font-size: 18px;
+}
+/* Ảnh sản phẩm */
+img{
+    margin-top: 5px;
+    object-fit: cover;
+}
+/* Ô tăng/giảm số lượng */
+#number-input {
+    display: inline-flex;
+    align-items: center;
+    border: 1px solid #ccc;
+}
+#number_subtraction, #number_addition{
+    background-color: #e0e0e0;
+    border: none;
+    width: 30px;
+    height: 32px;
+    cursor: pointer;
+    font-size: 18px;
+}
+.input_sl {
+    width: 35px;
+    height: 30px;
+    text-align:center;
+    border: none;
+}
+/* Ẩn mũi tên của ô input khi có type là number */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.input_note{
+    outline:none;
+    width: 95%;
+    height: 110px;
+    border: none;
+    margin-top: 5px;
+    margin-left: 5px;
+    resize: none;
+}
+/* Nút add to cart */
+.btn_add{
+    padding: 10px;
+    color: white;
+    background-color: orangered;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.btn_add:active{
+    background-color: rgb(230, 159, 133);
+}
+/* CSS màu background cho các row */
+/* Các hàng lẽ */
+tr:nth-child(odd) {
+    background-color: white;
+}
+/* Các hàng chẵn */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray */
+}
+
+/* CSS màu nền của text area */
+/* Các hàng lẻ */
+tr:nth-child(odd) textarea {
+    background-color: white;
+}
+/* Các hàng chẵn */
+tr:nth-child(even) textarea {
+    background-color: #f2f2f2;
+}
+/* logIn modal */
+.logAndReg_modal {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
