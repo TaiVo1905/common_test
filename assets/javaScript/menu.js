@@ -13,7 +13,7 @@ function filterMenu() {
         });
 
         // Hiển thị menu theo loại đã lọc
-        displayFilteredMenu();
+        displayFilteredMenu(filtered);
     });
     // Thêm sự kiện cho nút tìm kiếm
     const searchButton = document.querySelector('#btn_search');
@@ -26,7 +26,7 @@ function filterMenu() {
 filterMenu();
 
 // Hàm hiển thị món ăn đã lọc
-function displayFilteredMenu() {
+function displayFilteredMenu(filtered) {
     const menuTblBody = document.querySelector("#menu_tbl tbody");
     menuTblBody.innerHTML = ''; // Xóa nội dung cũ
 
@@ -51,7 +51,6 @@ function displayFilteredMenu() {
             `;
         });
     addData()
-        // addCart()
   // Thêm sự kiện nhấp chuột cho các sản phẩm mới
   addClickEventToProducts();
     // Nếu không có món ăn nào phù hợp
@@ -63,7 +62,6 @@ function displayFilteredMenu() {
             `;
         }
     }
-filterMenu()
 
 function addData(){
     document.querySelectorAll('.btn_add').forEach(button=>{
@@ -74,9 +72,7 @@ function addData(){
             
             const foodQuantity = document.querySelector(`#input_sl-${foodID}`).value;
             const foodNote = document.querySelector(`#input_note-${foodID}`).value;
-            console.log(foodNote)
             // lấy dữ liệu 
-            
             const foodItem = filtered.find(item =>{
                 return item.id === foodID;
             })
@@ -105,20 +101,20 @@ function addData(){
                 let itemIndex = data.carts.findIndex(item =>{
                     return item.nameFood === foodItem.name;
                 })
-                console.log(cartItem.food_Note)
+                console.log(itemIndex);
                 if (itemIndex !== -1){
                     data.carts[itemIndex].food_Qty = parseInt(data.carts[itemIndex].food_Qty) + cartItem.food_Qty;
-                    console.log(data.carts[itemIndex].food_Note, cartItem.food_Note)
+                    
                     if ((data.carts[itemIndex].food_Note !== "") && (cartItem.food_Note == "")) {
                         cartItem.food_Note = data.carts[itemIndex].food_Note;
                     } else {
                         data.carts[itemIndex].food_Note = cartItem.food_Note;
                     }
-                    // alert("Bạn thêm thành công!")
+                    alert("Bạn thêm thành công!")
                 }
                 else{
                     data.carts.push(cartItem);
-                    // alert("Thêm thành công!")
+                    alert("Thêm thành công!")
                 }
                 document.querySelector(`#input_sl-${foodID}`).value = 1;
                 document.querySelector(`#input_note-${foodID}`).value = "";

@@ -59,7 +59,7 @@ function logIn(){
             // lưu userID vào sessionStorage 
             sessionStorage.setItem('UserID', user.id);
             // Chuyển hướng hoặc thực hiện hành động khác
-            window.location.href = 'home.html';
+            window.location.href = 'index.html';
         } else {
             alert('Tên đăng nhập hoặc mật khẩu không đúng!');
         }
