@@ -6,7 +6,7 @@ function getDataLocalStorage() {
 }
 export default getDataLocalStorage;
 function saveData() {
-    fetch ('../data/data.json')
+    fetch ('assets/data/data.json')
     .then (response => response.json())
     .then (data => {
         if(localStorage.getItem('data') === null){
