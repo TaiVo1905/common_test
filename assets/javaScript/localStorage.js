@@ -2,7 +2,7 @@ export const setDataLocalStorage = function (data) {
     localStorage.setItem('data', JSON.stringify(data));
 }
 function getDataLocalStorage() {
-    return JSON.parse(localStorage.getItem('data'))[0];
+    return JSON.parse(localStorage.getItem('data'));
 }
 export default getDataLocalStorage;
 function saveData() {
